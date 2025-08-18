@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router";
+import { Container } from "@mui/material";
 
 import { Header } from "@/components/Header/Header";
 
@@ -7,9 +8,11 @@ export const App = () => {
     return (
         <>
             <Header/>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Outlet />
-            </Suspense>
+            <Container component='main'>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Outlet />
+                </Suspense>
+            </Container>
         </>
     );
 };
