@@ -1,5 +1,6 @@
 import { lazy, type ReactNode } from "react";
 import type { RouteObject } from "react-router";
+import { entitites } from "./entities";
 
 interface BasicRoute {
     element: ReactNode;
@@ -13,11 +14,16 @@ type PathRoute = BasicRoute & { path: string, index?: never};
 type RouteItem = IndexRoute | PathRoute;
 
 const Home = lazy(() => import('@/pages/Home/Home'));
+const Profile = lazy(() => import('@/pages/Profile/Profile'));
 
 export const routes: RouteItem[] = [
     {
         index: true,
         element: <Home />
+    },
+    {
+        path: entitites.USER,
+        element: <Profile />
     }
 ];
 
