@@ -1,7 +1,15 @@
+import { Suspense } from "react";
+import { Outlet } from "react-router";
+
+import { Header } from "@/components/Header/Header";
+
 export const App = () => {
     return (
-        <h1>
-            Init
-        </h1>
+        <>
+            <Header/>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Outlet />
+            </Suspense>
+        </>
     );
 };
