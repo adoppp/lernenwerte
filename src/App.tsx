@@ -1,7 +1,18 @@
+import { Suspense } from "react";
+import { Outlet } from "react-router";
+import { Container } from "@mui/material";
+
+import { Header } from "@/components/Header/Header";
+
 export const App = () => {
     return (
-        <h1>
-            Init
-        </h1>
+        <>
+            <Header/>
+            <Container component='main'>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Outlet />
+                </Suspense>
+            </Container>
+        </>
     );
 };
