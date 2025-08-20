@@ -1,13 +1,13 @@
 import type { FC, ReactElement } from "react";
 import { NavLink } from "react-router";
-import { Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 import { containerStyles } from "@/components/Header/Header.styles";
 import { entitites } from "@/routing/entities";
 
 export const Header: FC = (): ReactElement => {
     return ( 
-        <Container 
+        <Box 
             component='header' 
             sx={containerStyles}
         >
@@ -26,6 +26,6 @@ export const Header: FC = (): ReactElement => {
                     Profile
                 </NavLink>
             </Button>
-        </Container>
+        </Box>
     );
 };

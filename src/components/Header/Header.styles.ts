@@ -5,7 +5,6 @@ export const containerStyles: SxProps = {
     display: 'flex',
     justifyContent: "space-between",
     alignItems: 'center',
-    paddingTop: '16px', 
-    paddingBottom: '16px',
+    padding: '12px 32px', 
     borderBottom: `1px solid ${grey[300]}` 
 };
