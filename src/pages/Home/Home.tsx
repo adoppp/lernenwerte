@@ -1,6 +1,8 @@
 import type { FC, ReactElement } from "react";
 
-import { TestCard } from "@/components/TestCard/TestCard";
+import { TestCard } from "@/components/TestList/TestCard/TestCard";
+import { TestList } from "@/components/TestList/TestList";
+import api from '@/api/tests.json';
 
 const Home: FC = (): ReactElement => {
     const tests = [
@@ -30,11 +32,12 @@ const Home: FC = (): ReactElement => {
         }
     ];
 
-    const items = tests.map(item => <TestCard lessonTitle={item.titleL} themeTitle={item.titleT} questions={item.questions} color={item.color} />);
+    // const items = tests.map(item => <TestCard lessonTitle={item.titleL} themeTitle={item.titleT} questions={item.questions} color={item.color} />);
 
     return (
         <>
-            {items}
+            {/* {items} */}
+            <TestList subjects={api} />
         </>
     );
 };

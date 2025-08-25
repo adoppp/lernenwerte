@@ -22,7 +22,7 @@ export const routes: RouteItem[] = [
         element: <Home />
     },
     {
-        path: entitites.USER,
+        path: entitites.SCORES,
         element: <Profile />
     }
 ];
