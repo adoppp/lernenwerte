@@ -1,0 +1,173 @@
+[  
+  {
+    "id": 1,
+    "title": "Математика",
+    "color": "blue",
+    "quizes": [
+      {
+        "id": 1,
+        "theme": "Basics",
+        "questions": [
+          {
+            "question": "Сколько будет 7 + 5?",
+            "options": ["10", "11", "12", "13"],
+            "answer": "12"
+          },
+          {
+            "question": "Чему равно 9 × 3?",
+            "options": ["27", "18", "21", "36"],
+            "answer": "27"
+          },
+          {
+            "question": "Чему равно 100 ÷ 25?",
+            "options": ["2", "3", "4", "5"],
+            "answer": "4"
+          },
+          {
+            "question": "Квадрат числа 6 равен:",
+            "options": ["12", "18", "36", "30"],
+            "answer": "36"
+          },
+          {
+            "question": "Сколько граней у куба?",
+            "options": ["4", "6", "8", "12"],
+            "answer": "6"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "theme": "Arifmetik basics",
+        "questions": [
+          {
+            "question": "Сколько будет 7 + 5?",
+            "options": ["10", "11", "12", "13"],
+            "answer": "12"
+          },
+          {
+            "question": "Чему равно 9 × 3?",
+            "options": ["27", "18", "21", "36"],
+            "answer": "27"
+          },
+          {
+            "question": "Чему равно 100 ÷ 25?",
+            "options": ["2", "3", "4", "5"],
+            "answer": "4"
+          },
+          {
+            "question": "Квадрат числа 6 равен:",
+            "options": ["12", "18", "36", "30"],
+            "answer": "36"
+          },
+          {
+            "question": "Сколько граней у куба?",
+            "options": ["4", "6", "8", "12"],
+            "answer": "6"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "theme": "Basics",
+        "questions": [
+          {
+            "question": "Сколько будет 7 + 5?",
+            "options": ["10", "11", "12", "13"],
+            "answer": "12"
+          },
+          {
+            "question": "Чему равно 9 × 3?",
+            "options": ["27", "18", "21", "36"],
+            "answer": "27"
+          },
+          {
+            "question": "Чему равно 100 ÷ 25?",
+            "options": ["2", "3", "4", "5"],
+            "answer": "4"
+          },
+          {
+            "question": "Квадрат числа 6 равен:",
+            "options": ["12", "18", "36", "30"],
+            "answer": "36"
+          },
+          {
+            "question": "Сколько граней у куба?",
+            "options": ["4", "6", "8", "12"],
+            "answer": "6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Информатика",
+    "color": "purple",
+    "quizes": [
+      {
+        "id": 1,
+        "theme": "Basics",
+        "questions": [
+          {
+            "question": "Как называется язык разметки для веб-страниц?",
+            "options": ["Python", "HTML", "C++", "Java"],
+            "answer": "HTML"
+          },
+          {
+            "question": "Какой тип данных хранит только true/false?",
+            "options": ["String", "Boolean", "Integer", "Float"],
+            "answer": "Boolean"
+          },
+          {
+            "question": "Какой символ используют для комментариев в Python?",
+            "options": ["//", "#", "/* */", "<!-- -->"],
+            "answer": "#"
+          },
+          {
+            "question": "Как называется основная структура, где хранятся элементы в виде списка?",
+            "options": ["Array", "Function", "Variable", "Class"],
+            "answer": "Array"
+          },
+          {
+            "question": "Какой оператор используется для сравнения равенства в большинстве языков программирования?",
+            "options": ["=", "==", "===", "!="],
+            "answer": "=="
+          }
+        ] 
+      },
+      {
+        "id": 1,
+        "theme": "Basics",
+        "questions": [
+          {
+            "question": "Как называется язык разметки для веб-страниц?",
+            "options": ["Python", "HTML", "C++", "Java"],
+            "answer": "HTML"
+          },
+          {
+            "question": "Какой тип данных хранит только true/false?",
+            "options": ["String", "Boolean", "Integer", "Float"],
+            "answer": "Boolean"
+          },
+          {
+            "question": "Какой символ используют для комментариев в Python?",
+            "options": ["//", "#", "/* */", "<!-- -->"],
+            "answer": "#"
+          },
+          {
+            "question": "Как называется основная структура, где хранятся элементы в виде списка?",
+            "options": ["Array", "Function", "Variable", "Class"],
+            "answer": "Array"
+          },
+          {
+            "question": "Какой оператор используется для сравнения равенства в большинстве языков программирования?",
+            "options": ["=", "==", "===", "!="],
+            "answer": "=="
+          }
+        ] 
+      }
+    ]
+  }
+]
+
+ 
