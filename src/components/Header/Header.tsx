@@ -1,36 +1,31 @@
 import type { FC, ReactElement } from "react";
 import { NavLink } from "react-router";
-import { Box, Button, Container } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
 
-import { boxStyles, containerStyles, imgStyles } from "@/components/Header/Header.styles";
+import { containerStyles } from "@/components/Header/Header.styles";
 import { entitites } from "@/routing/entities";
-import Logo from '@/assets/logo.png';
 
 export const Header: FC = (): ReactElement => {
     return ( 
-        <Box
-            sx={boxStyles}
+        <Container 
             component='header' 
+            sx={containerStyles}
         >
-            <Container 
-                sx={containerStyles}
+            <Typography 
+                variant="h4" 
+                component='h1'
             >
-                <img
-                    src={Logo}
-                    alt="logo"
-                    loading="lazy"
-                    style={imgStyles}
-                />
+                Lernenwerte
+            </Typography>
+            <Button
+                variant="outlined"
+            >
                 <NavLink 
-                    to={entitites.SCORES}
+                    to={entitites.USER}
                 >
-                    <Button
-                        variant="outlined"
-                    >
-                            Scores
-                    </Button>
+                    Profile
                 </NavLink>
-            </Container>
-        </Box>
+            </Button>
+        </Container>
     );
 };

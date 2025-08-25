@@ -8,7 +8,7 @@ export const App = () => {
     return (
         <>
             <Header/>
-            <Container component='main' sx={{ paddingTop: '32px'}}>
+            <Container component='main'>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Outlet />
                 </Suspense>
