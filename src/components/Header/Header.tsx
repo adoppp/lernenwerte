@@ -15,12 +15,14 @@ export const Header: FC = (): ReactElement => {
             <Container 
                 sx={containerStyles}
             >
-                <img
-                    src={Logo}
-                    alt="logo"
-                    loading="lazy"
-                    style={imgStyles}
-                />
+                <NavLink to={entitites.HOME}>
+                    <img
+                        src={Logo}
+                        alt="logo"
+                        loading="lazy"
+                        style={imgStyles}
+                    />
+                </NavLink>
                 <NavLink 
                     to={entitites.SCORES}
                 >

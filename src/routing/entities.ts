@@ -1,6 +1,6 @@
 export const entitites = {
     HOME: '/',
     TESTS: 'tests',
-    TEST: 'tests/:id',
+    TEST: ':testId',
     SCORES: 'scores'
 } as const;

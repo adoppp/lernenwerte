@@ -9,16 +9,17 @@ import { actionsStyles, blockStyles, CardContentStyles, cardStylesDecorator, des
 import type { ColorNaming } from "@/types";
 
 interface TestCardProps {
+    id: number,
     title: string,
     theme: string,
     questions: number,
-    color: ColorNaming;
+    color: ColorNaming,
 };
 
-export const TestCard: FC<TestCardProps> = ({ title, theme, questions, color }): ReactElement => {
+export const TestCard: FC<TestCardProps> = ({ id, title, theme, questions, color }): ReactElement => {
     return (
         <li>
-            <NavLink to={entitites.TEST}>
+            <NavLink to={`/${entitites.TESTS}/${id}`}>
                     <Card sx={cardStylesDecorator(color)}>
                         <CardContent sx={CardContentStyles}>
                             <div style={blockStyles}>

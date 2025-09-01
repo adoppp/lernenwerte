@@ -15,6 +15,9 @@ type RouteItem = IndexRoute | PathRoute;
 
 const Home = lazy(() => import('@/pages/Home/Home'));
 const Profile = lazy(() => import('@/pages/Profile/Profile'));
+const Tests = lazy(() => import('@/pages/Tests/Tests'));
+const TestHome = lazy(() => import('@/pages/TestHome/TestHome'));
+const Test = lazy(() => import('@/pages/Test/Test'));
 
 export const routes: RouteItem[] = [
     {
@@ -24,6 +27,20 @@ export const routes: RouteItem[] = [
     {
         path: entitites.SCORES,
         element: <Profile />
+    },
+    {
+        path: entitites.TESTS,
+        element: <Tests />,
+        children: [
+            {
+                index: true,
+                element: <TestHome />
+            },
+            {
+                path: entitites.TEST,
+                element: <Test />
+            }
+        ]
     }
 ];
 

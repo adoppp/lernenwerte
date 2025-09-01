@@ -6,10 +6,11 @@ import { TestCard } from "@/components/TestList/TestCard/TestCard";
 import { boxStyles } from "@/components/TestList/TestList.styles";
 
 interface TestListProps {
-    subjects?: Subjects
+    subjects: Subjects,
+    max?: number[],
 };
 
-export const TestList: FC<TestListProps> = ({ subjects }): ReactElement => {
+export const TestList: FC<TestListProps> = ({ subjects, max }): ReactElement => {
     const renderTests = () => {
         const formattedTests: Array<Quiz & OmitedSubject> = [];
     
@@ -25,13 +26,14 @@ export const TestList: FC<TestListProps> = ({ subjects }): ReactElement => {
                 return acc;
             }, formattedTests)
     
-            console.log(formattedTests)
             return formattedTests;
         });
         
         return formattedTests.map(test => {
             return (
                 <TestCard 
+                    key={test.title + test.id}
+                    id={test.id}
                     title={test.title}
                     theme={test.theme}
                     questions={test.questions.length}
@@ -43,7 +45,7 @@ export const TestList: FC<TestListProps> = ({ subjects }): ReactElement => {
 
     return (
         <Box component='ul' sx={boxStyles}>
-            {renderTests()}
+            {max && max.length !== 0 ? renderTests().slice(max[0], max[1]) : renderTests()}
         </Box>
     );
 };

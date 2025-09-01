@@ -3,12 +3,12 @@ import type { FC, ReactElement } from "react";
 import { TestList } from "@/components/TestList/TestList";
 import api from '@/api/tests.json';
 
-const Home: FC = (): ReactElement => {
+const TestHome: FC = (): ReactElement => {
     return (
-        <>
-            <TestList subjects={api} max={[0, 5]} />
-        </>
+        <div>
+            <TestList subjects={api} />
+        </div>
     );
 };
 
-export default Home;
+export default TestHome;
