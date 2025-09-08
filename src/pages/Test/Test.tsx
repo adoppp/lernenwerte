@@ -1,14 +1,10 @@
-import { TestForm } from "@/sections/Test/TestForm/TestForm";
 import type { FC, ReactElement } from "react";
-import { useParams } from "react-router";
+
+import { TestForm } from "@/sections/Test/TestForm/TestForm";
 
 const Test: FC = (): ReactElement => {
-    const { testId } = useParams();
-    console.log (testId);
-
     return (
         <div>
-            {testId}
             <TestForm />
         </div>
     );

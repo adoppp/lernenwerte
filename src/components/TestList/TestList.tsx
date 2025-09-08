@@ -1,13 +1,18 @@
 import type { FC, ReactElement } from "react";
 import { Box } from "@mui/material";
+import { motion } from "framer-motion";
 
 import type { ColorNaming, OmitedSubject, Quiz, Subjects } from "@/types";
 import { TestCard } from "@/components/TestList/TestCard/TestCard";
-import { boxStyles } from "@/components/TestList/TestList.styles";
 
 interface TestListProps {
     subjects: Subjects,
     max?: number[],
+};
+
+const listVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } },
 };
 
 export const TestList: FC<TestListProps> = ({ subjects, max }): ReactElement => {
@@ -29,22 +34,26 @@ export const TestList: FC<TestListProps> = ({ subjects, max }): ReactElement => 
             return formattedTests;
         });
         
-        return formattedTests.map(test => {
-            return (
-                <TestCard 
-                    key={test.title + test.id}
-                    id={test.id}
-                    title={test.title}
-                    theme={test.theme}
-                    questions={test.questions.length}
-                    color={test.color as ColorNaming}
-                />
-            );
-        });
+        return formattedTests.map(test => (
+            <TestCard 
+                key={test.title + test.id}
+                id={test.id}
+                title={test.title}
+                theme={test.theme}
+                questions={test.questions.length}
+                color={test.color as ColorNaming}
+            />
+        ));
     };
 
     return (
-        <Box component='ul' sx={boxStyles}>
+        <Box
+            component={motion.ul}
+            variants={listVariants}
+            initial="hidden"
+            animate="visible"
+            sx={{ padding: 0, margin: 0 }}
+        >
             {max && max.length !== 0 ? renderTests().slice(max[0], max[1]) : renderTests()}
         </Box>
     );

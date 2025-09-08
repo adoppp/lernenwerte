@@ -8,11 +8,11 @@ export const App = () => {
     return (
         <>
             <Header/>
-            <Container component='main' sx={{ padding: '40px 24px'}}>
+            {/* <Container component='main' sx={{ padding: '40px 24px'}}> */}
                 <Suspense fallback={<div>Loading...</div>}>
                     <Outlet />
                 </Suspense>
-            </Container>
+            {/* </Container> */}
         </>
     );
 };

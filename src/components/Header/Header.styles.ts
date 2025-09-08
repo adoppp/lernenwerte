@@ -14,6 +14,6 @@ export const containerStyles: SxProps = {
 };
 
 export const imgStyles: CSSProperties = { 
-    width: '40px', 
-    height: '40px'
+    width: '80px', 
+    height: '50px'
 };
