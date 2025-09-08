@@ -1,5 +1,5 @@
 import type { FC, ReactElement } from "react";
-import { Container, Typography, Box, Button, Grid, Card, CardContent } from "@mui/material";
+import { Container, Typography, Box, Button, Card, CardContent } from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import InsightsIcon from "@mui/icons-material/Insights";
@@ -101,46 +101,65 @@ const Home: FC = (): ReactElement => {
 
       {/* Features Section */}
       <Container maxWidth="lg" sx={{ pt: 8, pb: 4 }}>
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <Typography variant="h4" textAlign="center" gutterBottom sx={{ fontWeight: 600, mb: 6 }}>
-            Warum solltest du die Tests machen?
-          </Typography>
+  <motion.div
+    variants={staggerContainer}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+  >
+    <Typography
+      variant="h4"
+      textAlign="center"
+      gutterBottom
+      sx={{ fontWeight: 600, mb: 6 }}
+    >
+      Warum solltest du die Tests machen?
+    </Typography>
 
-          <Grid container spacing={4} justifyContent="center">
-            {features.map((feature, i) => (
-              <Grid item xs={12} sm={6} md={4} key={i}>
-                <motion.div variants={fadeInUp} transition={{ delay: i * 0.2, duration: 0.6 }}>
-                  <Card
-                    sx={{
-                      p: 4,
-                      textAlign: "center",
-                      borderRadius: 4,
-                      boxShadow: 2,
-                      cursor: "pointer",
-                      transition: "0.3s",
-                      "&:hover": {
-                        boxShadow: 8,
-                        transform: "translateY(-8px)",
-                        backgroundColor: "rgba(245,247,250,0.9)",
-                      },
-                    }}
-                  >
-                    {feature.icon}
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
-                        {feature.title}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {feature.desc}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </Grid>
-            ))}
-          </Grid>
-        </motion.div>
-      </Container>
+    {/* Grid через Box */}
+    <Box
+      display="grid"
+      gridTemplateColumns="repeat(auto-fill, minmax(280px, 1fr))"
+      gap={4}
+      justifyContent="center"
+    >
+      {features.map((feature, i) => (
+        <Box
+          key={i}
+          component={motion.div}
+          variants={fadeInUp}
+          transition={{ delay: i * 0.2, duration: 0.6 }}
+        >
+          <Card
+            sx={{
+              p: 4,
+              textAlign: "center",
+              borderRadius: 4,
+              boxShadow: 2,
+              cursor: "pointer",
+              transition: "0.3s",
+              "&:hover": {
+                boxShadow: 8,
+                transform: "translateY(-8px)",
+                backgroundColor: "rgba(245,247,250,0.9)",
+              },
+            }}
+          >
+            {feature.icon}
+            <CardContent>
+              <Typography variant="h6" gutterBottom sx={{ fontWeight: 600 }}>
+                {feature.title}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {feature.desc}
+              </Typography>
+            </CardContent>
+          </Card>
+        </Box>
+      ))}
+    </Box>
+  </motion.div>
+</Container>
 
       {/* Test List Section */}
       <Container id="tests" maxWidth="md" sx={{ py: 8 }}>
