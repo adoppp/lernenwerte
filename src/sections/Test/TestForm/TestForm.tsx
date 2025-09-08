@@ -207,7 +207,7 @@ export const TestForm: FC = (): ReactElement => {
           <Button variant="outlined" onClick={handleReset}>
             Erneut versuchen
           </Button>
-          <Button variant="contained" color="primary" onClick={() => navigate(`/${entitites.TESTS}`)}>
+          <Button variant="contained" color="primary" onClick={() => navigate(`${entitites.HOME}/${entitites.TESTS}`)}>
             Zur Tests
           </Button>
         </Box>

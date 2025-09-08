@@ -4,7 +4,7 @@ import { mapRoutes, routes } from "@/routing/router.config";
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/lernenwerte',
         element: <App />,
         children: mapRoutes(routes),
     }

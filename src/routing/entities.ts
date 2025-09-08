@@ -1,5 +1,5 @@
 export const entitites = {
-    HOME: '/',
+    HOME: '/lernenwerte',
     TESTS: 'tests',
     TEST: ':testId',
     SCORES: 'scores'

@@ -26,7 +26,7 @@ export const TestCard: FC<TestCardProps> = ({ id, title, theme, questions, color
 
     const handleParams = () => {
         navigate({
-            pathname: `/${entitites.TESTS}/${id}`,
+            pathname: `${entitites.HOME}/${entitites.TESTS}/${id}`,
             search: `?${createSearchParams({ title: title.toLowerCase() })}`
         });
     };
