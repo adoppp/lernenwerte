@@ -1,1 +1,0 @@
-import{o as s,C as t}from"./index-CiVn2lIB.js";import{T as o}from"./TestList-A_dEhESz.js";import{a as r}from"./tests-Cx23Rewj.js";import"./Typography-D-yUQ3se.js";const p=()=>s.jsx(t,{sx:{pt:6},children:s.jsx(o,{subjects:r})});export{p as default};
